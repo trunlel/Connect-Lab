@@ -12,6 +12,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Home from "../pages/Home/Home";
 import Navbar from "../components/Navbar/Navbar";
+import Perfil from "../pages/Perfil/Perfil";
 
 const AppRoutes = () => {
   const Private = ({ children }) => {
@@ -48,7 +49,7 @@ const AppRoutes = () => {
             path="/perfil"
             element={
               <Private>
-                <Home />
+                <Perfil />
               </Private>
             }
           />

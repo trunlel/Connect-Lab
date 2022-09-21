@@ -11,6 +11,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const coverUser = localStorage.getItem("user");
+
     if (coverUser) {
       setUser(JSON.parse(coverUser));
     }

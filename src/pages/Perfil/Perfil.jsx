@@ -1,7 +1,7 @@
 function Perfil() {
   return (
     <div>
-      <h2>Perfil</h2>
+      <h2>Perfil bora man</h2>
     </div>
   );
 }
