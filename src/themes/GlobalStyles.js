@@ -11,7 +11,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html, body {
-    overflow: hidden;
     background-color: #111;
   }
+
+
 `;
