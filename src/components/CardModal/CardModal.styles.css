@@ -15,6 +15,7 @@
   left: 30%;
   right: 30%;
   bottom: 20%;
-  background: linear-gradient(to right, rgb(10, 57, 24), rgb(46, 131, 90));
-  color: #fdfdfd;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+  color: #26c955;
+  border: 2px solid #26c955;
 }

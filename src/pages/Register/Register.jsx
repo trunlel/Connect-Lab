@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { set, useForm } from "react-hook-form";
 import { Card } from "../../components/Card/Card";
 import { CardDiv } from "../../components/Card/Styles";
 import { CardModal } from "../../components/CardModal/CardModal";
@@ -13,6 +14,7 @@ import {
 } from "./Styles";
 
 const Register = () => {
+  const { register, handleSubmit, setValue, setFocus } = useForm();
   const [devices, setDevices] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -41,7 +43,7 @@ const Register = () => {
             <Img src={device.photoUrl} alt="" />
             <p>{device.name}</p>
 
-            <CardModal></CardModal>
+            <CardModal title={device.name} img={device.photoUrl}></CardModal>
           </Card>
         ))}
       </CardDiv>

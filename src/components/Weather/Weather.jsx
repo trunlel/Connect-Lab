@@ -1,23 +1,19 @@
-import React, { useState } from "react";
-import axios from "axios";
+import { PrevDiv, TempDiv } from "./Styled";
 
 export const Weather = () => {
-  const url = "http://api.weatherapi.com/v1.current.json";
-
-
-
-
   return (
-    <>
-      <h3>Clima na suas Coordernadas(exemplo)</h3>
-      <hr />
-      <ul>
-        <li>Temp</li>
-        <li>Temp</li>
-        <li>Temp</li>
-        <li>Temp</li>
-        <li>Temp</li>
-      </ul>
-    </>
+    <TempDiv>
+      <div>
+        <h2>16°C</h2>
+      </div>
+      <div>
+        <h2>Santa Catarina, SC</h2>
+      </div>
+      <PrevDiv>
+        <h3>Sensação térmica: 15°C -</h3>
+        <h3>Precipitação: 0mm -</h3>
+        <h3> Chance de chuva: 0%</h3>
+      </PrevDiv>
+    </TempDiv>
   );
 };

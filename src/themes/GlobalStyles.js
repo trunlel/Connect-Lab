@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html, body {
-    background-color: #111;
+    background-color: white;
   }
 
 

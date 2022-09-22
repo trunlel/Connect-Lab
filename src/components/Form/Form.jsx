@@ -27,13 +27,7 @@ const validationSchema = yup.object().shape({
 });
 
 export const Form = () => {
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    setFocus,
-    formState: { errors },
-  } = useForm({
+  const { register, handleSubmit, setValue, setFocus } = useForm({
     resolver: yupResolver(validationSchema),
   });
 
