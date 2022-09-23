@@ -12,7 +12,7 @@ export const TempDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fdfd;
+  background-color: #ccc;
   margin-top: 50px;
   box-shadow: 3px 4px 17px black;
   width: 70%;

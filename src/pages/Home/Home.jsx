@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Weather } from "../../components/Weather/Weather";
 import { AuthContext } from "../../contexts/Auth";
-import { Main } from "./Styled";
+import { Container, DivCard, DivSearch, DivWeather, Main } from "./Styled";
 
 function Home() {
   const { logout } = useContext(AuthContext);
@@ -11,8 +11,29 @@ function Home() {
 
   return (
     <Main>
-      <button onClick={handleLogout}>Logout</button>
-      <Weather />
+      <DivWeather>
+        <button onClick={handleLogout}>Logout</button>
+        <Weather />
+      </DivWeather>
+      <DivSearch>
+        <button>Casa</button>
+        <button>Escritório</button>
+        <button>Fábrica</button>
+      </DivSearch>
+      <Container>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+        <DivCard>Olá</DivCard>
+      </Container>
     </Main>
   );
 }

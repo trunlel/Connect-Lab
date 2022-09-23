@@ -11,11 +11,10 @@
   padding: 10px;
   border-radius: 15px;
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 30%;
   right: 30%;
-  bottom: 20%;
-  background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
-  color: #26c955;
-  border: 2px solid #26c955;
+  bottom: 30%;
+  background-color: white;
+  color: black;
 }
