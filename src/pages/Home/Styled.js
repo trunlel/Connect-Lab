@@ -6,6 +6,7 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 `;
 
 export const DivWeather = styled.div`
@@ -46,12 +47,29 @@ export const Container = styled.div`
   justify-content: center;
   margin-top: 20px;
   gap: 30px;
+
+  img {
+    width: 50%;
+    height: 100%;
+  }
 `;
 export const DivCard = styled.div`
+  display: flex;
   padding: 15px;
-  width: 250px;
-  height: 100px;
+  width: 270px;
+  height: 130px;
   border-radius: 10px;
   background-color: #ffff;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   box-shadow: 5px 5px 16px black;
+
+  p {
+    font-weight: bold;
+    color: #26c955;
+  }
+  a {
+    margin-top: 90px;
+  }
 `;
