@@ -10,6 +10,7 @@ export const InputButton = (props) => {
         type={type}
         value={value}
         onChange={change}
+        autoComplete="off"
       />
       <Span className="focus-input" data-placeholder={name}></Span>
     </div>

@@ -34,6 +34,7 @@ const Login = () => {
               type="email"
               name="Email"
               text={email}
+              
               change={(e) => setEmail(e.target.value)}
             />
 

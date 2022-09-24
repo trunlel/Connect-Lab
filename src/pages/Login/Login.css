@@ -1,6 +1,7 @@
 .container-login {
   width: 100%;
-  min-height: 100vh;
+  min-height: 75vh;
+  margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

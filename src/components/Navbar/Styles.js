@@ -7,6 +7,8 @@ export const Img = styled.img`
   margin: 0;
 `;
 export const Nav = styled.nav`
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   background-color: #333;
@@ -31,6 +33,7 @@ export const Li = styled.li`
     font-weight: bold;
   }
   a:hover {
+    filter: drop-shadow(0 0 15px #26c955);
     font-weight: bold;
     transition: 360ms;
     color: black;
@@ -44,6 +47,14 @@ export const ButtonLogout = styled.button`
   color: #26c955;
   border: none;
   cursor: pointer;
+  filter: drop-shadow(0 0 0.75rem #26c955);
+  &:hover {
+    color: black;
+
+    text-shadow: 2px 2px 5px #26c955;
+    transition: 0.7s;
+    opacity: 0.9;
+  }
 `;
 
 export const LogoDiv = styled.div`
