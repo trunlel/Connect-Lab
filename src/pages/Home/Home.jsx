@@ -1,8 +1,7 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { CheckBoxButton } from "../../components/CheckBoxButton/CheckBoxButton";
 import { DetailsModal } from "../../components/DetailsModal/DetailsModal";
 import { Weather } from "../../components/Weather/Weather";
-import { AuthContext } from "../../contexts/Auth";
 import { buscarDeviceService } from "../../services";
 import {
   Container,
@@ -17,10 +16,6 @@ import {
 function Home() {
   const [devices, setDevices] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { logout } = useContext(AuthContext);
-  const handleLogout = () => {
-    logout();
-  };
 
   useEffect(() => {
     (async () => {
@@ -37,7 +32,6 @@ function Home() {
   return (
     <Main>
       <DivWeather>
-        <button onClick={handleLogout}>Logout</button>
         <Weather />
       </DivWeather>
       <DivSearch>

@@ -31,8 +31,8 @@ const AppRoutes = () => {
 
   return (
     <Router>
-      <Navbar />
       <AuthProvider>
+        <Navbar />
         <Routes>
           <Route exact path="/Login" element={<Login />} />
           <Route

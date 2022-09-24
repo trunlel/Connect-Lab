@@ -36,3 +36,28 @@ export const Li = styled.li`
     color: black;
   }
 `;
+
+export const ButtonLogout = styled.button`
+  margin-top: 8px;
+  font-size: 40px;
+  background-color: transparent;
+  color: #26c955;
+  border: none;
+  cursor: pointer;
+`;
+
+export const LogoDiv = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: default;
+  text-decoration: none;
+
+  h1 {
+    font-size: 40px;
+    margin-top: 10px;
+    color: #26c955;
+  }
+  a {
+    text-decoration: none;
+  }
+`;
