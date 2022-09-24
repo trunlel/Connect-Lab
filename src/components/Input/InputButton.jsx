@@ -6,7 +6,6 @@ export const InputButton = (props) => {
   return (
     <div className="wrap-input">
       <input
-        autoComplete="on"
         className={value !== "" ? "has-val input" : "input"}
         type={type}
         value={value}

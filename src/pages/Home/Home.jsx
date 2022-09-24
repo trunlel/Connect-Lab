@@ -4,7 +4,15 @@ import { DetailsModal } from "../../components/DetailsModal/DetailsModal";
 import { Weather } from "../../components/Weather/Weather";
 import { AuthContext } from "../../contexts/Auth";
 import { buscarDeviceService } from "../../services";
-import { Container, DivCard, DivSearch, DivWeather, Main } from "./Styled";
+import {
+  Container,
+  DivCard,
+  DivSearch,
+  DivWeather,
+  HeaderModal,
+  Main,
+  ModalContainer,
+} from "./Styled";
 
 function Home() {
   const [devices, setDevices] = useState([]);
@@ -46,21 +54,44 @@ function Home() {
               <p>{device.device.name}</p>
             </div>
             <DetailsModal>
-              <h1>{device.device.name}</h1>
-              <h2>Tipo: {device.device.type}</h2>
-              <h2>Fabricante: {device.device.madeBy}</h2>
-              <h2>
-                Estado:
-                <CheckBoxButton />
-              </h2>
+              <HeaderModal>
+                <h1>{device.device.name}</h1>
+              </HeaderModal>
+              <ModalContainer>
+                <h2>
+                  <span>Tipo:</span> {device.device.type}
+                </h2>
+                <h2>
+                  <span>Fabricante:</span> {device.device.madeBy}
+                </h2>
+                <h2>
+                  <span>Estado:</span>
+                  <CheckBoxButton />
+                </h2>
+              </ModalContainer>
               <hr />
-              <h1>Informações do Dispositivo</h1>
-              <br />
-              <h2>Local: {device.local.description}</h2>
-              <h2>Sinal: {device.device.info.signal}</h2>
-              <h2>MAC: {device.device.info.mac_address}</h2>
-              <h2>IP: {device.device.info.ip}</h2>´
-              
+
+              <HeaderModal>
+                <h1>Informações do Dispositivo</h1>
+              </HeaderModal>
+              <ModalContainer>
+                <h2>
+                  <span>Local: </span>
+                  {device.local.description}
+                </h2>
+                <h2>
+                  <span>Sinal: </span>
+                  {device.device.info.signal}
+                </h2>
+                <h2>
+                  <span>MAC:</span>
+                  {device.device.info.mac_address}
+                </h2>
+                <h2>
+                  <span>IP:</span>
+                  {device.device.info.ip}
+                </h2>
+              </ModalContainer>
             </DetailsModal>
           </DivCard>
         ))}

@@ -23,7 +23,7 @@ const Login = () => {
         <div className="wrap-login">
           <form onSubmit={handleSubmit}>
             <span className="login-form-title"> Bem vindo </span>
-            <p>{String(authenticated)}</p>
+            {/* <p>{String(authenticated)}</p> */}
             <span className="login-form-title">
               <span>
                 <Gi3DGlasses />

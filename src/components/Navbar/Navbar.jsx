@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/Auth";
 import logo from "../../image/logo.png";
 
 import { Nav, Img, List, Li } from "./Styles";
@@ -14,7 +16,7 @@ const Navbar = () => {
           <Link to="/">Inicio</Link>
         </Li>
         <Li>
-          <Link to="/Register">Cadastrar</Link>
+          <Link to="/Register">Dispositivos</Link>
         </Li>
         <Li>
           <Link to="/Perfil"> Perfil</Link>

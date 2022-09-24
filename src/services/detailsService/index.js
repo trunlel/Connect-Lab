@@ -1,10 +1,10 @@
 import { senaiApi } from "..";
 
-const buscarDevices = async () => {
+const getDetais = async () => {
   const coverUser = localStorage.getItem("user");
   const ourArray = JSON.parse(coverUser);
   const idPerfil = ourArray._id;
-  return senaiApi.get(`userDevices/user/${idPerfil}`);
+  return senaiApi.get(`users/${idPerfil}`);
 };
 
-export default buscarDevices;
+export default getDetais;

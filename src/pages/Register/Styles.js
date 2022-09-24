@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.main`
-  background-color: #ffff;
+  background-color: #ccc;
   display: flex;
   flex-direction: column;
 `;
 
 export const SearchContainer = styled.div`
   margin-bottom: 30px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,9 +15,10 @@ export const SearchContainer = styled.div`
 `;
 
 export const Input = styled.input`
+  font-size: 20px;
   width: 80vw;
   background-color: transparent;
-  color: #26c955;
+  color: black;
 `;
 
 export const SearchText = styled.h1`

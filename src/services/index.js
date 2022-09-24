@@ -7,3 +7,5 @@ export { default as devicesService } from "./devicesService";
 export { default as localService } from "./localService";
 export { default as cadastrarDeviceService } from "./cadastrarDeviceService";
 export { default as buscarDeviceService } from "./buscarDeviceService";
+export { default as detailsService } from "./detailsService";
+export { default as atulizarUserService } from "./atulizarUserService";

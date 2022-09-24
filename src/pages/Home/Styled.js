@@ -73,3 +73,26 @@ export const DivCard = styled.div`
     margin-top: 90px;
   }
 `;
+
+export const ModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  h2 {
+    margin-top: 5px;
+    color: black;
+  }
+  span {
+    color: #26c955;
+    margin-right: 10px;
+  }
+`;
+
+export const HeaderModal = styled.div`
+  color: #26c955;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
