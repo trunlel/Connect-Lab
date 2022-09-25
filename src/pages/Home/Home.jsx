@@ -1,10 +1,13 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { CheckBoxButton } from "../../components/CheckBoxButton/CheckBoxButton";
 import { DetailsModal } from "../../components/DetailsModal/DetailsModal";
 import { Weather } from "../../components/Weather/Weather";
-import { buscarDeviceService } from "../../services";
+import { buscarDeviceService, deleteDeviceService } from "../../services";
 import {
   Container,
+  DeleteButton,
   DivCard,
   DivSearch,
   DivWeather,
@@ -26,11 +29,21 @@ function Home() {
     })();
   }, []);
 
+  const deletePost = (data) => {
+    const createUserPromisse = deleteDeviceService.deleteDevice(data);
+    toast.promise(createUserPromisse, {
+      pending: "Deletando...",
+      success: "Deletado com sucesso!",
+      error: "Item invalido",
+    });
+    setTimeout(() => {
+      window.location.reload(true);
+    }, Math.floor(Math.random() * (5000 - 5000 + 1) + 1500));
+  };
+
   if (loading) {
     return <div>Carregando dados</div>;
   }
-  console.log(busca);
-  console.log(devices);
 
   const devicesFilter = devices.filter((device) =>
     device.room.toString().includes(busca),
@@ -111,8 +124,14 @@ function Home() {
                 </h2>
                 <h2>
                   <span>IP:</span>
-                  {device.device.info.ip}
+                  {device.device.info.ip_address}
                 </h2>
+
+                <DeleteButton>
+                  <button onClick={() => deletePost(device._id)}>
+                    Deletar
+                  </button>
+                </DeleteButton>
               </ModalContainer>
             </DetailsModal>
           </DivCard>

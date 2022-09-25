@@ -96,3 +96,23 @@ export const HeaderModal = styled.div`
   flex-direction: column;
   align-items: center;
 `;
+
+export const DeleteButton = styled.div`
+  margin-top: 18%;
+  margin-left: 83%;
+  button {
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    border: 1px solid red;
+    width: 100px;
+    color: red;
+    height: 30px;
+    background: transparent;
+    :hover {
+      transition: 1s;
+      background-color: #26c955;
+      color: white;
+    }
+  }
+`;

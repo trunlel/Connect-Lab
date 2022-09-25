@@ -9,3 +9,4 @@ export { default as cadastrarDeviceService } from "./cadastrarDeviceService";
 export { default as buscarDeviceService } from "./buscarDeviceService";
 export { default as detailsService } from "./detailsService";
 export { default as atulizarUserService } from "./atulizarUserService";
+export { default as deleteDeviceService } from "./deleteDeviceService";
