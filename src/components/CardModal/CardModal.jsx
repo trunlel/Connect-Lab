@@ -1,7 +1,6 @@
 import Modal from "react-modal";
 import { useState } from "react";
 import { Button, Container } from "./Styles";
-import "./CardModal.styles.css";
 import PropTypes from "prop-types";
 Modal.setAppElement("#root");
 
