@@ -24,6 +24,7 @@ import cadastrarDeviceService from "../../services/cadastrarDeviceService";
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
   const [devices, setDevices] = useState([]);
+  const [busca, setBusca] = useState("");
   const [local, setLocal] = useState([]);
   const [loading, setLoading] = useState(true);
   const [toggle] = useState("is_on");
@@ -66,15 +67,25 @@ const Register = () => {
   const ourArray = JSON.parse(coverUser);
   const idPerfil = ourArray._id;
 
+  const lowerBusca = busca.toLowerCase();
+  const devicesFilter = devices.filter((device) =>
+    device.name.toLowerCase().toString().includes(lowerBusca),
+  );
+
   return (
     <MainContainer>
       <SearchContainer>
         <SearchText>Buscar</SearchText>
-        <Input type="text" placeholder="Nome do dispositivo" />
+        <Input
+          type="text"
+          placeholder="Nome do dispositivo"
+          value={busca}
+          onChange={(e) => setBusca(e.target.value)}
+        />
       </SearchContainer>
 
       <CardDiv>
-        {devices.map((device) => (
+        {devicesFilter.map((device) => (
           <Card key={device._id}>
             <Img src={device.photoUrl} alt="Dispositivo" />
 

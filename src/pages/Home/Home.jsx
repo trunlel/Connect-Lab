@@ -16,6 +16,7 @@ import {
 function Home() {
   const [devices, setDevices] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [busca, setBusca] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -28,6 +29,12 @@ function Home() {
   if (loading) {
     return <div>Carregando dados</div>;
   }
+  console.log(busca);
+  console.log(devices);
+
+  const devicesFilter = devices.filter((device) =>
+    device.room.toString().includes(busca),
+  );
 
   return (
     <Main>
@@ -35,12 +42,33 @@ function Home() {
         <Weather />
       </DivWeather>
       <DivSearch>
-        <button>Casa</button>
-        <button>Escritório</button>
-        <button>Fábrica</button>
+        <button type="text" onClick={(e) => setBusca(e.target.value)} value="">
+          Todos
+        </button>
+        <button
+          type="text"
+          onClick={(e) => setBusca(e.target.value)}
+          value="Quarto"
+        >
+          Quarto
+        </button>
+        <button
+          type="text"
+          onClick={(e) => setBusca(e.target.value)}
+          value="Sala"
+        >
+          Sala
+        </button>
+        <button
+          type="text"
+          onClick={(e) => setBusca(e.target.value)}
+          value="Cozinha"
+        >
+          Cozinha
+        </button>
       </DivSearch>
       <Container>
-        {devices.map((device) => (
+        {devicesFilter.map((device) => (
           <DivCard key={device._id}>
             <img src={device.device.photoUrl} alt="" />
 
