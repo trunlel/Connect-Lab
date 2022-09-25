@@ -1,8 +1,8 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { CheckBoxButton } from "../../components/CheckBoxButton/CheckBoxButton";
 import { DetailsModal } from "../../components/DetailsModal/DetailsModal";
+import Loader from "../../components/Loader/Loader";
 import { Weather } from "../../components/Weather/Weather";
 import { buscarDeviceService, deleteDeviceService } from "../../services";
 import {
@@ -42,7 +42,7 @@ function Home() {
   };
 
   if (loading) {
-    return <div>Carregando dados</div>;
+    return <Loader />;
   }
 
   const devicesFilter = devices.filter((device) =>

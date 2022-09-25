@@ -20,6 +20,7 @@ import {
 } from "./Styles";
 import { toast } from "react-toastify";
 import cadastrarDeviceService from "../../services/cadastrarDeviceService";
+import Loader from "../../components/Loader/Loader";
 
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -46,7 +47,7 @@ const Register = () => {
   }, []);
 
   if (loading) {
-    return <div>Carregando dados</div>;
+    return <Loader />;
   }
 
   const handleData = (data) => {

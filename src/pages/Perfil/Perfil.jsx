@@ -13,6 +13,7 @@ import { Div, PerfilImg } from "./Styles";
 
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
+import Loader from "../../components/Loader/Loader";
 
 const validationSchema = yup.object().shape({
   fullName: yup.string().required(),
@@ -50,7 +51,7 @@ function Perfil() {
   }, []);
 
   if (loading) {
-    return <div>Carregando dados</div>;
+    return <Loader />;
   }
 
   const checkCEP = (e) => {

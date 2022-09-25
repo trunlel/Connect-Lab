@@ -13,13 +13,18 @@ import Register from "../pages/Register/Register";
 import Home from "../pages/Home/Home";
 import Navbar from "../components/Navbar/Navbar";
 import Perfil from "../pages/Perfil/Perfil";
+import Loader from "../components/Loader/Loader";
 
 const AppRoutes = () => {
   const Private = ({ children }) => {
     const { authenticated, loading } = useContext(AuthContext);
 
     if (loading) {
-      return <div className="loading">Carregando...</div>;
+      return (
+        <div className="loading">
+          <Loader />
+        </div>
+      );
     }
 
     if (!authenticated) {
