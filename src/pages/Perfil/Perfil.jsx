@@ -45,7 +45,6 @@ function Perfil() {
     (async () => {
       const response = await detailsService();
       setData(response.data);
-      console.log(response.data);
       setLoading(false);
     })();
   }, []);
@@ -64,10 +63,6 @@ function Perfil() {
       setFocus("userAddress.number");
     });
   };
-
-  // .then(() => {
-  //   notify("Sucesso!");
-  // });
 
   const handleDate = (data) => {
     const createUserPromisse = atulizarUserService.atualizaService(data);

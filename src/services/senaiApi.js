@@ -7,6 +7,5 @@ const senaiApi = axios.create({
 senaiApi.defaults.headers.common.Authorization =
   "Bearer " + localStorage.getItem("token");
 
-// console.log(localStorage.getState());
 
 export default senaiApi;

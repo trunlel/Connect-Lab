@@ -6,14 +6,13 @@ import { AuthContext } from "../../contexts/Auth";
 import "./Login.css";
 
 const Login = () => {
-  const { authenticated, login } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log("submit", { email, password });
     login(email, password);
   };
 
@@ -34,7 +33,6 @@ const Login = () => {
               type="email"
               name="Email"
               text={email}
-              
               change={(e) => setEmail(e.target.value)}
             />
 

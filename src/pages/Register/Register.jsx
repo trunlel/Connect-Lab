@@ -59,9 +59,7 @@ const Register = () => {
     });
     console.log(data);
 
-    // const toggler = () => {
-    //   toggle ? setToggle("false") : setToggle("true");
-    // };
+
   };
 
   const coverUser = localStorage.getItem("user");
@@ -158,15 +156,3 @@ const Register = () => {
 
 export default Register;
 
-/* {devices.map((device) => (
-            <li key={device._id}>{device.name}</li>
-          ))} */
-
-//   <CardDiv>
-// {devices.map((device) => (
-//   <Card key={device._id}>
-//     <Img src={device.photoUrl} alt="" />
-//     <p>{device.name}</p>
-//   </Card>
-// ))}
-// </CardDiv>

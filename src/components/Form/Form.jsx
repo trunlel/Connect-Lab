@@ -47,9 +47,7 @@ export const Form = () => {
     });
   };
 
-  // .then(() => {
-  //   notify("Sucesso!");
-  // });
+
 
   const handleDate = (data) => {
     const createUserPromisse = senaiApiService.criarUsuario(data);
